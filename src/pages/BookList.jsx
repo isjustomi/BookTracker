@@ -76,7 +76,7 @@ const BookList = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-center text-gray-100">{book.estado}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-center flex justify-center gap-4">
                       <Button
-                        className="bg-yellow-600 hover:bg-yellow-700 text-gray-900 px-3 py-1 rounded"
+                        className="bg-blue-100 hover:bg-blue-700 text-gray-900 px-3 py-1 rounded"
                         onClick={() => navigate(`/books/edit/${book.id}`)}
                       >
                         Editar

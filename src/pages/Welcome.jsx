@@ -18,14 +18,14 @@ const Welcome = () => {
   return (
     <div className="w-full h-full bg-gray-900 flex items-center justify-center">
       <div className="bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full text-center">
-        <SubTitulo className="text-gray-100 mb-4" titulo="¡Bienvenido a Book Tracker!" />
+        <SubTitulo className="text-white mb-4" titulo="¡Bienvenido a Book Tracker!" />
         <p className="text-gray-300 mb-6">
           ¡Gracias por visitar nuestra aplicación de seguimiento de libros!
         </p>
         <Button
           type="button"
           onClick={handleAccept}
-          className="bg-green-600 hover:bg-green-700 text-gray-900 px-6 py-2 rounded-lg"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
         >
           Ingresar
         </Button>
