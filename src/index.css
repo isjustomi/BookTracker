@@ -1,0 +1,97 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Estilos globales para que todo ocupe 100% del viewport y se elimine
+   el centering automático del body. También mantenemos tu esquema de
+   colores light/dark y los estilos para enlaces y botones que ya tenías.
+──────────────────────────────────────────────────────────────────────────── */
+
+/* 1) Forzar que html, body y #root ocupen 100% de ancho y alto */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) Esquema de color y tipografía base (tal como lo tenías) */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3) Estilos de enlace */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* 4) Elimina el centering automático que tenías en body */
+/*    (antes tenías display:flex; place-items:center; que centraba todo) */
+body {
+  margin: 0;
+  /* Eliminamos display:flex y place-items, 
+     para que los componentes gestionen su propio layout */
+  background-color: var(--bg-color, #242424);
+  color: var(--text-color, rgba(255, 255, 255, 0.87));
+  /* Permitir scroll si el contenido supera el alto */
+  overflow: hidden;
+  /* Nota: ahora tus páginas usarán flex-grow/overflow para mostrar su contenido */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* 5) Estilos generales para botón                             */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 6) Variables para tema claro / oscuro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #213547;
+    --bg-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* 7) Asegurarnos de que los iconos SVG u otros elementos no alteren el layout*/
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
